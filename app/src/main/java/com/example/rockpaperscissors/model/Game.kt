@@ -1,11 +1,13 @@
 package com.example.rockpaperscissor.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.android.parcel.Parcelize
 import java.util.*
 
-
+@Parcelize
 @Entity(tableName = "game_table")
 data class Game(
 
@@ -25,4 +27,4 @@ data class Game(
     @ColumnInfo(name = "playerPick")
     val playerPick: Action
 
-)
+) : Parcelable

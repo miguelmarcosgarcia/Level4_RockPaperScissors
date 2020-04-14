@@ -17,6 +17,9 @@ import kotlinx.coroutines.withContext
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
+    // lateinit keyword will let kotlin know that this variable will definitely be initialized at
+    // a later stage. We can only initialize it in or after the onCreate because we need to pass
+    // the activity context to it.
     private lateinit var gameRepository: GameRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
